@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "94983209203",
+    "project_id": "matin-16036",
+    "storage_bucket": "matin-16036.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94983209203:android:7a8da2a03ddaa3dbba3786",
+        "android_client_info": {
+          "package_name": "com.yuri.v20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFj8YD37Au_pvEmmWXiyMB3XldHv_AbhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
