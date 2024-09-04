@@ -9,10 +9,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.yuri.v20.ACTIVITIES.HomePageActivity;
+import com.yuri.v20.HELPER.AndroidHelper;
+import com.yuri.v20.HELPER.FirebaseHelper;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class SplashActivity extends AppCompatActivity {
+
+    private boolean isUserLogged = FirebaseHelper.isUserLogged();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +37,14 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-                timer.cancel();
+                if(!isUserLogged){
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    timer.cancel();
+                }else{
+                    AndroidHelper.trocarTela(getApplicationContext(), HomePageActivity.class);
+                    timer.cancel();
+                }
             }
         };
 

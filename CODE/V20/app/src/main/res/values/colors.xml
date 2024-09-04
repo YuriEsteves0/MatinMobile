@@ -5,4 +5,5 @@
     <color name="laranjaPrimario">#FEA940</color>
     <color name="verdePrimario">#99C601</color>
     <color name="cinzaSecundario">#898583</color>
+    <color name="transparente">#000FFFFF</color>
 </resources>

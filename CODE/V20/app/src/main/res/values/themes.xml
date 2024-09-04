@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle">
     <!-- Base application theme. -->
     <style name="Base.Theme.V20" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -9,9 +9,29 @@
 
     <style name="Theme.V20" parent="Base.Theme.V20"/>
 
-    <style name="Widget.AppCompat.EditText" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/laranjaPrimario</item>
+    <style name="Widget.AppCompat.EditText" parent="Widget.AppCompat.EditText" tools:ignore="ResourceCycle">
+        <item name="android:textColor">@color/black</item>
         <item name="android:textColorHint">@color/black</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="CustomBottomNavigationItemTextActive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/laranjaPrimario</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="CustomBottomNavigationItemTextInactive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="Widget.AppCompat.TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="RelativeLayoutStyle">
