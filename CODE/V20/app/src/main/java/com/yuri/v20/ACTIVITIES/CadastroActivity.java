@@ -91,7 +91,7 @@ public class CadastroActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         AndroidHelper.fazerToast(getApplicationContext(), "Usuário registrado com sucesso!");
                         Log.d("TAG", "onSuccess: saída 500");
-                        AndroidHelper.trocarTela(getApplicationContext(), HomePageActivity.class);
+                        AndroidHelper.trocarTela(getApplicationContext(), HomePageActivity.class, CadastroActivity.this);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

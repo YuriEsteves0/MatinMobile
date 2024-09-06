@@ -13,27 +13,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
         android:layout_toRightOf="@id/fotoUsu">
-        <TextView
+        <TextView android:id="@+id/nomeUsu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="17sp"
             android:text="Nome Usuario"/>
-        <TextView
+        <TextView android:id="@+id/emailUsu"
             android:layout_width="wrap_content"
+            android:textColor="@color/cinzaSecundario"
+            android:textSize="17sp"
             android:layout_height="wrap_content"
             android:text="emailusuario@gmail.com"/>
     </LinearLayout>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton android:id="@+id/pesquisarBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:src="@drawable/pesquisar"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
         android:background="@color/transparente"
         android:layout_toLeftOf="@id/menuHamb"/>
     <ImageButton android:id="@+id/menuHamb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_centerVertical="true"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/menuhamb"
         android:layout_marginStart="30dp"
         android:background="@color/transparente"

@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.yuri.v20.ACTIVITIES.HomePageActivity;
+import com.yuri.v20.HELPER.ActivityHelper;
 import com.yuri.v20.HELPER.AndroidHelper;
 import com.yuri.v20.HELPER.FirebaseHelper;
 
@@ -38,11 +39,12 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if(!isUserLogged){
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    AndroidHelper.trocarTela(getApplicationContext(), MainActivity.class, SplashActivity.this);
+                    finish();
                     timer.cancel();
                 }else{
-                    AndroidHelper.trocarTela(getApplicationContext(), HomePageActivity.class);
+                    AndroidHelper.trocarTela(getApplicationContext(), HomePageActivity.class, SplashActivity.this   );
+                    finish();
                     timer.cancel();
                 }
             }

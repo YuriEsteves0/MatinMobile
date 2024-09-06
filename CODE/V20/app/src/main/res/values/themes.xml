@@ -4,7 +4,7 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="fontFamily">@font/montserrat</item>
-
+        <item name="android:textSize">17sp</item>
     </style>
 
     <style name="Theme.V20" parent="Base.Theme.V20"/>
@@ -17,14 +17,15 @@
     </style>
 
     <style name="CustomBottomNavigationItemTextActive" parent="TextAppearance.AppCompat.Caption">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/laranjaPrimario</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
 
     <style name="CustomBottomNavigationItemTextInactive" parent="TextAppearance.AppCompat.Caption">
-        <item name="android:textSize">16sp</item>
+<!--        <item name="android:textSize">16sp</item>-->
+        <item name="android:textSize">15sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/montserrat</item>
@@ -36,7 +37,7 @@
 
     <style name="RelativeLayoutStyle">
         <item name="android:background">@color/white</item>
-        <item name="android:padding">30dp</item>
+        <item name="android:padding">20dp</item>
     </style>
 
     <style name="InputTextStyle">

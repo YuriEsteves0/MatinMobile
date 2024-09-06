@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="30dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:backgroundTintMode="@color/white"
+            app:cardElevation="1500dp"
+            app:cardCornerRadius="15dp">
+            <ImageView android:id="@+id/fotoProd1"
+                android:layout_width="132dp"
+                android:layout_height="91dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kiwi"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView android:id="@+id/nomeProd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginStart="10dp"
+            android:text="Nome Produto"/>
+
+        <TextView android:id="@+id/precoProd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/laranjaPrimario"
+            android:textSize="17sp"
+            android:layout_marginStart="10dp"
+            android:text="R$ 15.00"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         entrarEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AndroidHelper.trocarTela(MainActivity.this, LoginActivity.class);
+                AndroidHelper.trocarTela(MainActivity.this, LoginActivity.class, MainActivity.this);
             }
         });
 
         cadastroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AndroidHelper.trocarTela(MainActivity.this, CadastroActivity.class);
+                AndroidHelper.trocarTela(MainActivity.this, CadastroActivity.class, MainActivity.this);
             }
         });
     }

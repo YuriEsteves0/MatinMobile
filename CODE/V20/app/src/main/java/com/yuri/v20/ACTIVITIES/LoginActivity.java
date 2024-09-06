@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                AndroidHelper.trocarTela(LoginActivity.this, HomePageActivity.class);
+                                AndroidHelper.trocarTela(LoginActivity.this, HomePageActivity.class, LoginActivity.this);
                                 Log.d("TAG", "onComplete: Foi" + email + senha );
                             }else{
                                 Log.d("TAG", "onComplete: Foi nao papai" + email + senha );
