@@ -1,6 +1,7 @@
 package com.yuri.v20.ACTIVITIES;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -36,6 +37,7 @@ public class CadastroActivity extends AppCompatActivity {
     private boolean isRepetPasswordVisible = false;
     private FirebaseAuth auth = FirebaseHelper.getAuth();
     private Button btnEntrar;
+    private static final String ARQUIVO_PREFERENCIA = "ArquivoPreferencia";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +62,19 @@ public class CadastroActivity extends AppCompatActivity {
                 if(senha.equals(senhaRepet)){
                     String email = emailUsu.getText().toString();
                     String nome = nomeUsu.getText().toString();
+
                     Log.d("TAG", "onClick: " + email + nome + senha);
-                    criarUsuAuth(email, senha, nome);
+
+                    SharedPreferences preferences = getSharedPreferences(ARQUIVO_PREFERENCIA, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("nome", nome);
+                    editor.putString("email", email);
+                    editor.putString("senha", senha);
+                    editor.putString("nivelAcesso", "cliente");
+                    editor.apply();
+
+                    AndroidHelper.trocarTela(getApplicationContext(), EscolherFotoActivity.class, CadastroActivity.this);
+//                    criarUsuAuth(email, senha, nome);
                 }
             }
         });

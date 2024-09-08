@@ -64,8 +64,8 @@ public class HomeFragment extends Fragment {
                             String nomeProd = document.getString("nomeProd");
                             Double precoProd = document.getDouble("precoProd");
                             String imagemResId = document.getString("imagemResId");
-
-                            Produto produto = new Produto(nomeProd, precoProd, imagemResId);
+//
+//                            Produto produto = new Produto(nomeProd, precoProd, imagemResId);
 
                         }
                     }

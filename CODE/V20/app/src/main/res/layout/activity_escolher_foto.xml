@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ACTIVITIES.EscolherFotoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/RelativeLayoutStyle">
+
+        <TextView android:id="@+id/logintxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro"
+            android:textColor="@color/laranjaPrimario"
+            android:textSize="30sp"/>
+
+        <TextView android:id="@+id/txtApoio"
+            android:layout_below="@id/logintxt"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comece a comprar seus produtos agora!"
+            android:textColor="@color/cinzaSecundario"
+            android:textSize="16sp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/CL"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/txtApoio">
+
+            <androidx.cardview.widget.CardView android:id="@+id/CV"
+                android:layout_width="257dp"
+                android:layout_height="257dp"
+                app:cardCornerRadius="1000dp"
+                app:cardElevation="3dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView android:id="@+id/imagemUsu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nopic"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageButton android:id="@+id/imgPick"
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:background="@drawable/cheio_laranja_b15"
+                android:src="@drawable/choosepic"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="-60dp"
+                android:elevation="3dp"
+                app:layout_constraintEnd_toEndOf="@id/CV"
+                app:layout_constraintTop_toBottomOf="@id/CV"
+                android:padding="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cheio_laranja_b15"
+            android:text="Entrar"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_below="@id/CL"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

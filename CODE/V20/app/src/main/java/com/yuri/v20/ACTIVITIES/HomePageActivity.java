@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -33,6 +34,8 @@ public class HomePageActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private TextView nomeUsu, emailUsu;
     private ImageButton pesquisarBtn;
+    private ImageView fotoUsu;
+    private FirebaseAuth auth = FirebaseHelper.getAuth();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,15 @@ public class HomePageActivity extends AppCompatActivity {
                 Log.d("TAG", "onClick: " + ActivityHelper.qntActivities());
                 ActivityHelper.finishAllActivities();
                 Log.d("TAG", "onClick: " + ActivityHelper.qntActivities());
+            }
+        });
+
+        fotoUsu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                ActivityHelper.finishAllActivities();
+                finish();
             }
         });
 
@@ -98,5 +110,6 @@ public class HomePageActivity extends AppCompatActivity {
         nomeUsu = findViewById(R.id.nomeUsu);
         emailUsu = findViewById(R.id.emailUsu);
         pesquisarBtn = findViewById(R.id.pesquisarBtn);
+        fotoUsu = findViewById(R.id.fotoUsu);
     }
 }

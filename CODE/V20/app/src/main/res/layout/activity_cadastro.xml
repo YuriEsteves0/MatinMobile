@@ -106,52 +106,6 @@
             android:layout_marginTop="20dp"
             />
 
-        <LinearLayout android:id="@+id/ou"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnEntrar"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <View
-                android:layout_width="90dp"
-                android:layout_height="1dp"
-                android:background="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="OU"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/laranjaPrimario"/>
-            <View
-                android:layout_width="90dp"
-                android:layout_height="1dp"
-                android:background="@color/black"/>
-
-        </LinearLayout>
-
-        <Button android:id="@+id/btnEntrarGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cheio_laranja_b15"
-            android:text="Entrar com o google (indisp.)"
-            android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_semibold"
-            android:layout_below="@id/ou"
-            android:layout_marginTop="20dp"
-            />
-
-        <Button android:id="@+id/btnEntrarFace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cheio_laranja_b15"
-            android:text="Entrar com o Facebook (indisp.)"
-            android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_semibold"
-            android:layout_below="@id/btnEntrarGoogle"
-            android:layout_marginTop="20dp"
-            />
 
     </RelativeLayout>
 
