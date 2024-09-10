@@ -46,6 +46,7 @@
                 <ImageView android:id="@+id/imagemUsu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/nopic"/>
             </androidx.cardview.widget.CardView>
 
